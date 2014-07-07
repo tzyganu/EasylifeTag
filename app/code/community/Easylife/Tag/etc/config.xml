@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Easylife_Tag extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE_EASYLIFE_TAG.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Easylife
+ * @package        Easylife_Tag
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Easylife_Tag>
+            <version>0.1.0</version>
+        </Easylife_Tag>
+    </modules>
+    <global>
+        <events>
+            <controller_front_init_routers>
+                <observers>
+                    <easylife_tag>
+                        <class>Easylife_Tag_Controller_Router</class>
+                        <method>initControllerRouters</method>
+                    </easylife_tag>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+        <models>
+            <tag>
+                <rewrite>
+                    <tag>Easylife_Tag_Model_Tag</tag>
+                </rewrite>
+            </tag>
+            <tag_resource>
+                <rewrite>
+                    <tag>Easylife_Tag_Model_Resource_Tag</tag>
+                </rewrite>
+            </tag_resource>
+        </models>
+    </global>
+</config>
