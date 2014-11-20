@@ -11,16 +11,18 @@
  *
  * @category       Easylife
  * @package        Easylife_Tag
- * @copyright      Copyright (c) 2014
+ * @copyright      2014 Marius Strajeru
  * @license        http://opensource.org/licenses/mit-license.php MIT License
  */
-class Easylife_Tag_Model_Tag extends Mage_Tag_Model_Tag {
+class Easylife_Tag_Model_Tag extends Mage_Tag_Model_Tag
+{
     /**
      * change the tag url from `tag/product/list/tagId/ID-HERE` to `tag/TAG-NAME_HERE`
      * @access public
      * @return string
      */
-    public function getTaggedProductsUrl() {
+    public function getTaggedProductsUrl()
+    {
         return Mage::getUrl('', array('_direct' => 'tag/'.$this->getName()));
     }
 }

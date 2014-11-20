@@ -12,14 +12,14 @@
  *
  * @category       Easylife
  * @package        Easylife_Tag
- * @copyright      Copyright (c) 2014
+ * @copyright      2014 Marius Strajeru
  * @license        http://opensource.org/licenses/mit-license.php MIT License
  */
 -->
 <config>
     <modules>
         <Easylife_Tag>
-            <version>0.1.0</version>
+            <version>1.0.0</version>
         </Easylife_Tag>
     </modules>
     <global>

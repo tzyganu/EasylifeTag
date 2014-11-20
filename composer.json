@@ -1,0 +1,14 @@
+{
+    "name":"tzyganu/EasylifeTag",
+    "type":"magento-module",
+	"licence": "mit",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/tzyganu/EasylifeTag"
+        }
+    ],
+	"require":{
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}

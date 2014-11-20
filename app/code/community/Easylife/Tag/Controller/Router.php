@@ -11,16 +11,18 @@
  *
  * @category       Easylife
  * @package        Easylife_Tag
- * @copyright      Copyright (c) 2014
+ * @copyright      2014 Marius Strajeru
  * @license        http://opensource.org/licenses/mit-license.php MIT License
  */
-class Easylife_Tag_Controller_Router extends Mage_Core_Controller_Varien_Router_Abstract{
+class Easylife_Tag_Controller_Router extends Mage_Core_Controller_Varien_Router_Abstract
+{
     /**
      * add router to all routers
      * @param $observer
      * @return $this
      */
-    public function initControllerRouters($observer){
+    public function initControllerRouters($observer)
+    {
         $front = $observer->getEvent()->getFront();
         $front->addRouter('easylife_tag', $this);
         return $this;
@@ -31,7 +33,8 @@ class Easylife_Tag_Controller_Router extends Mage_Core_Controller_Varien_Router_
      * @param Zend_Controller_Request_Http $request
      * @return bool
      */
-    public function match(Zend_Controller_Request_Http $request){
+    public function match(Zend_Controller_Request_Http $request)
+    {
         //if magento is not installed redirect to install
         if (!Mage::isInstalled()) {
             Mage::app()->getFrontController()->getResponse()
@@ -53,7 +56,7 @@ class Easylife_Tag_Controller_Router extends Mage_Core_Controller_Varien_Router_
         if ($parts[0] != 'tag') {
             return false;
         }
-        $tagName = $parts[1]; //tag name
+        $tagName = urldecode($parts[1]); //tag name
         //load the tag model
         $tag = Mage::getModel('tag/tag')->loadByName($tagName);
         //if there is no tag with this name available in the current store just do nothing
