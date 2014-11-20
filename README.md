@@ -1,7 +1,7 @@
-Easylife Tag v0.1.0
+Easylife Tag v1.0.0
 ===========
 
-A small magento extension that turns your tags urls from 'tag/product/list/tagId/10' to 'tag/tag-here'
+A small Magento extension that turns your tags urls from 'tag/product/list/tagId/10' to 'tag/tag-here'
 
 **Compatibility:**
 Magento CE 1.7.0.2 and later. Most probably it works on older versions. I just didn't test.
