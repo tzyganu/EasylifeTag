@@ -57,6 +57,9 @@ class Easylife_Tag_Controller_Router extends Mage_Core_Controller_Varien_Router_
             return false;
         }
         $tagName = urldecode($parts[1]); //tag name
+        $tagName = transliterator_transliterate('Any-Latin; Latin-ASCII', $tagName);
+        $tagName = strtolower($tagName);
+        $tagName = str_replace(' ', '-', $tagName);
         //load the tag model
         $tag = Mage::getModel('tag/tag')->loadByName($tagName);
         //if there is no tag with this name available in the current store just do nothing
