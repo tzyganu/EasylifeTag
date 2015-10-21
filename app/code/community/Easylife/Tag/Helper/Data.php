@@ -33,4 +33,13 @@ class Easylife_Tag_Helper_Data extends Mage_Core_Helper_Abstract
       return str_replace(' ', '-', $url);
     }
 
+    /**
+     * takes URL and return tag name from database
+     * @return string
+     */
+    public function denormalizeURL($url)
+    {
+      return str_replace('-', ' ', $url);
+    }
+
 }
