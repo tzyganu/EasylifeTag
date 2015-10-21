@@ -24,9 +24,7 @@ class Easylife_Tag_Model_Tag extends Mage_Tag_Model_Tag
     public function getTaggedProductsUrl()
     {
         $name = $this->getName();
-        $name = transliterator_transliterate('Any-Latin; Latin-ASCII', $name);
-        $name = strtolower($name);
-        $name = str_replace(' ', '-', $name);
+        $name = Mage::helper('easylife_tag')->normalizeURL($name);
         return Mage::getUrl('', array('_direct' => 'tag/'.$name));
     }
 }
