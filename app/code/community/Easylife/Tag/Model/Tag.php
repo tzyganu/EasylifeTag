@@ -23,6 +23,8 @@ class Easylife_Tag_Model_Tag extends Mage_Tag_Model_Tag
      */
     public function getTaggedProductsUrl()
     {
-        return Mage::getUrl('', array('_direct' => 'tag/'.$this->getName()));
+        $name = $this->getName();
+        $name = Mage::helper('easylife_tag')->normalizeURL($name);
+        return Mage::getUrl('', array('_direct' => 'tag/'.$name));
     }
 }
