@@ -23,6 +23,11 @@
         </Easylife_Tag>
     </modules>
     <global>
+        <helpers>
+            <easylife_tag>
+                <class>Easylife_Tag_Helper</class>
+            </easylife_tag>
+        </helpers>
         <events>
             <controller_front_init_routers>
                 <observers>
